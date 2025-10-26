@@ -1,0 +1,7 @@
+android-apktool-bin
+android-studio
+imhex-bin
+readpe
+tex-fmt-bin
+uftrace-git
+vscodium-bin

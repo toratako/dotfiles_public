@@ -1,0 +1,11 @@
+# Initialize plugins/tools
+
+# fzf-tab needs fzf initialization
+source <(fzf --zsh)
+eval "$(sheldon source)"
+eval "$(starship init zsh)"
+eval "$(mise activate zsh)"
+eval "$(uv generate-shell-completion zsh)"
+eval "$(zoxide init zsh)"
+eval "$(navi widget zsh)"
+eval "$(thefuck --alias)"

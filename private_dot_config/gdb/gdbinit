@@ -1,0 +1,42 @@
+define init-pwndbg
+
+    source /usr/share/pwndbg/gdbinit.py
+
+    set confirm on
+    set print pretty on
+    set disassembly-flavor intel
+    set debuginfod enabled on
+
+    # pwndbg specific settings
+    set show-tips off
+    set telescope-skip-repeating-val off
+    set show-compact-regs on
+    set show-flags on
+    set show-retaddr-reg on
+
+    set telescope-lines 16
+    set context-backtrace-lines 4
+    set context-stack-lines 16
+    # set context-code-lines 12
+
+    # set r2decompiler radare2
+    set r2decompiler rizin
+    # set context-ghidra if-no-source
+
+    # dare
+    # set pagination off
+    # set follow-fork-mode parent
+    # set detach-on-fork off
+
+end
+document init-pwndbg
+Initialize pwndbg (https://github.com/pwndbg/pwndbg)
+end
+
+
+define setg
+    set context-ghidra if-no-source
+end
+document setg
+Execute `set context-ghidra to if-no-source`
+end

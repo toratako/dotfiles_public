@@ -1,0 +1,11 @@
+[tools]
+node = "latest"
+python = "latest"
+ruby = "latest"
+usage = "latest"
+
+[settings]
+idiomatic_version_file_enable_tools = ["ruby"]
+
+[settings.python]
+compile = false

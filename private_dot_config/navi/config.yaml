@@ -1,0 +1,14 @@
+style:
+  tag:
+    color: green
+    width_percentage: 25
+    min_width: 20
+  comment:
+    color: blue
+    width_percentage: 40
+    min_width: 45
+  snippet:
+    color: white
+
+shell:
+  command: zsh

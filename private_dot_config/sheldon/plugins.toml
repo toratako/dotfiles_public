@@ -1,0 +1,25 @@
+shell = "zsh"
+
+[plugins]
+
+# [plugins.LS_COLORS]
+# github = "trapd00r/LS_COLORS"
+
+# fzf-tab needs initialize before wrap widgets
+[plugins.fzf-tab]
+github = "Aloxaf/fzf-tab"
+
+[plugins.fzf-tab-source]
+github = "Freed-Wu/fzf-tab-source"
+
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+
+[plugins.zsh-history-substring-search]
+github = "zsh-users/zsh-history-substring-search"
+
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"

@@ -1,0 +1,11 @@
+amd-ucode
+amdgpu_top
+blender
+inkscape
+intel-ucode
+libreoffice-still
+neovim
+obs-studio
+texlive
+texlive-langcjk
+texlive-langjapanese
