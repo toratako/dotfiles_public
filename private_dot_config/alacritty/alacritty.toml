@@ -20,4 +20,4 @@ size = 12.0
 offset = { x = 0, y = 2 }
 
 [terminal]
-shell = { program = "/bin/zsh", args = ["-l", "-c", "tmux"] }
+shell = { program = "/bin/zsh", args = ["-l", "-c", "tmux attach || tmux new"] }

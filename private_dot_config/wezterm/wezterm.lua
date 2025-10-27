@@ -24,6 +24,7 @@ config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
 
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
+-- config.integrated_title_button_style = "Gnome"
 config.integrated_title_button_alignment = "Right"
 config.integrated_title_buttons = { "Hide", "Maximize", "Close" }
 
@@ -31,6 +32,13 @@ config.show_tab_index_in_tab_bar = false
 config.switch_to_last_active_tab_when_closing_tab = true
 
 local WINDOW_FRAME_COLOR = "#a4aed6"
+
+config.window_padding = {
+  left = 4,
+  right = 4,
+  top = 0,
+  bottom = 0,
+}
 
 config.window_frame = {
   inactive_titlebar_bg = "none",
@@ -60,6 +68,27 @@ config.colors = {
 
     background = "#00FFFF",
 
+    -- overwrote active-tab color with format-tab-title so this is applied for hover only.
+    -- active_tab = {
+    --   bg_color = "#00FF00",
+    --   fg_color = "#00FF00",
+    --   intensity = "Normal",
+    --   underline = "None",
+    --   italic = false,
+    --   strikethrough = false,
+    -- },
+
+    -- inactive_tab = {
+    --   bg_color = "#FF0000",
+    --   fg_color = "#FF0000",
+    -- },
+
+    -- inactive_tab_hover = {
+    --   bg_color = "#FF0000",
+    --   fg_color = "#FF0000",
+    --   italic = true,
+    -- },
+
     new_tab = {
       bg_color = "none",
       fg_color = "#FFFFFF",
@@ -73,8 +102,19 @@ config.colors = {
   },
 }
 
+-- config.inactive_pane_hsb = {
+--   saturation = 0.5,
+--   brightness = 0.5,
+-- }
+
 local SOLID_LEFT_ARROW = wezterm.nerdfonts.ple_lower_right_triangle
 local SOLID_RIGHT_ARROW = wezterm.nerdfonts.ple_upper_left_triangle
+
+
+-- config.show_tabs_in_tab_bar = false
+-- config.show_new_tab_button_in_tab_bar = false
+-- config.enable_tab_bar = false
+-- config.hide_tab_bar_if_only_one_tab = false
 
 -- https://wezterm.org/config/lua/window-events/format-tab-title.html
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
@@ -126,5 +166,15 @@ wezterm.on("update-status", function(window)
     { Text = SOLID_RIGHT_ARROW .. "     " },
   }))
 end)
+
+-- !!You can't use Wezterm with tmux now!!!
+-- Ref: https://github.com/wezterm/wezterm/issues/4317
+-- if there is already session number 0, attach to it. Otherwise, create a new session.
+-- config.default_prog = { "/bin/zsh", "-l", "-c", "tmux attach-session -t 0 || tmux new-session -s 0" }
+
+-- config.disable_default_key_bindings = true
+-- config.keys = require("keybinds").keys
+-- config.key_tables = require("keybinds").key_tables
+-- config.leader = { key = "q", mods = "CTRL", timeout_milliseconds = 2000 }
 
 return config

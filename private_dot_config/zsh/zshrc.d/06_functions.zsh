@@ -21,3 +21,7 @@ zz() {
         return 1
     fi
 }
+
+chezmoi-cd() {
+    cd $(chezmoi source-path)
+}

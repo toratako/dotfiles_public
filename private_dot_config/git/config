@@ -2,6 +2,57 @@
     # !!warn!! place this file correctly
     path = ~/.config/git/config.local
 
+# Thanks: https://www.reddit.com/r/commandline/comments/wf7oju/post_your_favorite_git_aliases/, https://gist.github.com/mwhite/6887990
+# !!DON'T USE/CREATE DANGEROUS ABBREVIATIONS!!
+[alias]
+    a = add .
+    aa = add -A
+    ap = add -p
+
+    c = commit
+    cm = commit -m
+    ca = commit --amend
+    cam = commit --amend -m
+    can = commit --amend --no-edit
+    fixup = commit --fixup
+
+    sw = switch
+    swc = switch -c
+
+    b = branch
+
+    d = diff
+    ds = diff --staged
+
+    lo = log --oneline --graph --decorate
+    la = log --oneline --graph --decorate --all
+    ll = log --graph --decorate --all --date=iso-local --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]"
+    lg = log --graph --abbrev-commit --decorate --date=relative \
+             --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
+
+    st = stash
+    stp = stash pop
+    stl = stash list
+
+    s = status -sb
+    unstage = reset HEAD --
+    uncommit = reset --soft HEAD~1
+    last = log -1 HEAD
+    root = rev-parse --show-toplevel
+    whoami = config user.email
+
+[url "git@github.com:"]
+    pushInsteadOf = https://github.com/
+
+[url "git@gitlab.com:"]
+    pushInsteadOf = https://gitlab.com/
+
+[color]
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
+
 [ghq]
     root = ~/repos/
 
@@ -49,7 +100,7 @@
 # why the hell not?
 
 [help]
-    autocorrect = prompt
+    autocorrect = false
 [commit]
     verbose = true
 [rerere]
@@ -66,9 +117,6 @@
 
 [core]
     # fsmonitor = true
-    # untrackedCache = true
-[merge]
-    # (just 'diff3' if git version < 2.3)
-    # conflictstyle = zdiff3
+    untrackedCache = true
 [pull]
-    # rebase = true
+   # rebase = true
