@@ -1,4 +1,5 @@
 format = """
+$hostname\
 [░▒▓](#a3aed2)\
 [  ](bg:#a3aed2 fg:#090c0c)\
 [](bg:#769ff0 fg:#a3aed2)\
@@ -56,3 +57,9 @@ disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#1d2230"
 format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+
+[hostname]
+ssh_only = true
+ssh_symbol = "🌐"
+format = "[$ssh_symbol]($style) "
+disabled = false
