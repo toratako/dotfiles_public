@@ -1,5 +1,4 @@
--- Based on: https://zenn.dev/mozumasu/articles/mozumasu-wezterm-customization
--- Thank you!
+-- Thanks: https://zenn.dev/mozumasu/articles/mozumasu-wezterm-customization
 
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()

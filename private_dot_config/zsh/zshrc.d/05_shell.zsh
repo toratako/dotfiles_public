@@ -3,13 +3,16 @@
 ## Misc
 setopt auto_cd
 setopt no_beep
-setopt nolistbeep
-setopt RM_STAR_SILENT
+setopt no_list_beep
+setopt rm_star_silent
 
 ## History
 export HISTFILE="$XDG_STATE_HOME"/zsh/history
 export HISTSIZE=50000
 export SAVEHIST=50000
+# export HISTTIMEFORMAT=""
+# unset HISTTIMEFORMAT
+# setopt extended_history
 setopt inc_append_history
 setopt share_history
 setopt hist_ignore_dups
@@ -25,12 +28,19 @@ setopt pushd_silent
 setopt pushd_ignore_dups
 
 setopt no_case_glob
-setopt extendedglob
+setopt extended_glob
 setopt nonomatch
+
+# I'd like check candidates first
+# setopt menu_complete
+# similar zstyle menu select
+# setopt auto_menu
+# setopt auto_list
 
 setopt list_packed
 setopt list_rows_first
 
-unsetopt caseglob
+unsetopt case_glob
 setopt complete_in_word
 setopt magic_equal_subst
+# setopt glob_dots
