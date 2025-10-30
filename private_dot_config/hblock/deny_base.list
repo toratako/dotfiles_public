@@ -1,0 +1,178 @@
+# This file does not mean, I hate/dislike or want to block these sites/apps/services. 
+# I just want to block them on my devices for productivity, privacy, security, or other personal reasons.
+
+# Browser Shootings
+0.0.0.0 1v1.lol
+0.0.0.0 2v2.io
+0.0.0.0 armedforces.io
+0.0.0.0 browserfps.com
+0.0.0.0 deadshot.io
+0.0.0.0 ev.io
+0.0.0.0 jamir.io
+0.0.0.0 kirka.io
+0.0.0.0 kour.io
+0.0.0.0 krunker.io
+0.0.0.0 shellshock.io
+0.0.0.0 tok.browserfps.com
+0.0.0.0 venge.io
+0.0.0.0 voxiom.io
+0.0.0.0 www.bulletbonanza.io
+
+# Browser Games
+0.0.0.0 agar.io
+0.0.0.0 bonk.io
+0.0.0.0 colonist.io
+0.0.0.0 diep.io
+0.0.0.0 game.mahjongsoul.com
+0.0.0.0 godfield.net
+0.0.0.0 ipokersoul.com
+0.0.0.0 littlebigsnake.com
+0.0.0.0 moomoo.io
+0.0.0.0 mope.io
+0.0.0.0 orteil.dashnet.org
+0.0.0.0 paper.io
+0.0.0.0 scratch.mit.edu
+0.0.0.0 skribbl.io
+0.0.0.0 slither.com
+0.0.0.0 tenhou.net
+0.0.0.0 tetr.io
+0.0.0.0 turbowarp.org
+
+# Browser Games (specific)
+0.0.0.0 2048game.com
+0.0.0.0 gdbrowser.com
+0.0.0.0 geometry-dashonline.io
+0.0.0.0 geometry-lite.io
+0.0.0.0 geometrydash-game.io
+0.0.0.0 geometrydash-lite.io
+0.0.0.0 geometrydash.io
+0.0.0.0 geometrydashwave.io
+0.0.0.0 geometrygame.io
+0.0.0.0 geometrygame.org
+0.0.0.0 minesweeper-pro.com
+0.0.0.0 minesweeper.one
+0.0.0.0 minesweeper.online
+0.0.0.0 minesweeper.us
+0.0.0.0 minesweeperonline.com
+0.0.0.0 play2048.co
+0.0.0.0 www.1000mines.com
+
+# Typing Games
+0.0.0.0 keybr.com
+0.0.0.0 monkeytype.com
+0.0.0.0 nitrotype.com www.nitrotype.com
+0.0.0.0 sushida.net
+0.0.0.0 taisoku.com
+0.0.0.0 typeracer.com play.typeracer.com
+0.0.0.0 typing-tube.net
+0.0.0.0 typing.twi1.me
+0.0.0.0 typingerz.com
+0.0.0.0 www.e-typing.ne.jp
+0.0.0.0 www.freetypinggame.net
+0.0.0.0 www.kidztype.com
+0.0.0.0 www.typing.com
+0.0.0.0 www.typingclub.com
+0.0.0.0 www.typinggames.zone
+0.0.0.0 www.typingtest.com
+0.0.0.0 zty.pe
+
+# Aim Trainer
+0.0.0.0 aim400kg.com
+0.0.0.0 aiming.pro
+0.0.0.0 aimtrainer.io
+0.0.0.0 humanbenchmark.com
+0.0.0.0 www.3daimtrainer.com app.3daimtrainer.com
+
+# CPS Test
+0.0.0.0 clickpersecond.com
+0.0.0.0 clickspeedtest.com
+0.0.0.0 cps-check.com
+0.0.0.0 cpstest.click
+0.0.0.0 cpstest.io
+0.0.0.0 cpstest.org
+0.0.0.0 www.arealme.com
+0.0.0.0 www.clickspeedtest.info
+0.0.0.0 www.rapidtables.com
+
+# Game HUB
+0.0.0.0 addictinggames.com
+0.0.0.0 cardgames.io
+0.0.0.0 crazygames.com www.crazygames.com
+0.0.0.0 ja.boardgamearena.com en.boardgamearena.com
+0.0.0.0 kongregate.com
+0.0.0.0 miniclip.com
+0.0.0.0 neal.fun
+0.0.0.0 now.gg
+0.0.0.0 playclassic.games
+0.0.0.0 playhop.com
+0.0.0.0 playingcards.jp
+0.0.0.0 poki.com
+0.0.0.0 tps.game-tansaku.net
+0.0.0.0 www.1001games.com
+0.0.0.0 www.onlinegames.io
+0.0.0.0 www.quibbble.com
+0.0.0.0 y8.com
+
+# 5ch
+0.0.0.0 agree.5ch.net
+0.0.0.0 asahi.5ch.net
+0.0.0.0 egg.5ch.net
+0.0.0.0 fate.5ch.net
+0.0.0.0 hayabusa9.5ch.net
+0.0.0.0 hebi.5ch.net
+0.0.0.0 himawari.5ch.net
+0.0.0.0 itest.5ch.net
+0.0.0.0 krsw.5ch.net
+0.0.0.0 lavender.5ch.net
+0.0.0.0 leia.5ch.net
+0.0.0.0 mao.5ch.net
+0.0.0.0 matsuri.5ch.net
+0.0.0.0 medaka.5ch.net
+0.0.0.0 mevius.5ch.net
+0.0.0.0 nhk2.5ch.net
+0.0.0.0 qb5.5ch.net
+0.0.0.0 rio2016.5ch.net
+0.0.0.0 rosie.5ch.net
+0.0.0.0 swallow.5ch.net
+0.0.0.0 tanuki.5ch.net
+0.0.0.0 www.5ch.net
+
+# Open2ch
+0.0.0.0 dgkpzy.open2ch.net
+0.0.0.0 find.open2ch.net
+0.0.0.0 hayabusa.open2ch.net
+0.0.0.0 i.open2ch.net
+0.0.0.0 image.open2ch.net
+0.0.0.0 j.open2ch.net
+0.0.0.0 nama.open2ch.net
+0.0.0.0 node.open2ch.net
+0.0.0.0 stream.open2ch.net
+
+# Other BBS
+0.0.0.0 2ch.net
+0.0.0.0 2ch.sc c.2ch.sc
+0.0.0.0 bakusai.com
+0.0.0.0 bbs.eddibb.cc
+0.0.0.0 jbbs.shitaraba.net
+0.0.0.0 m.bakusai.net
+0.0.0.0 next2ch.net
+0.0.0.0 talk.jp
+
+# Matome Sites (not blocked kdroidwin's filter. grep -Fxf plsignorethx_kdroidwin_dns_blocklist.txt deny_base.list)
+0.0.0.0 2chmatome2.appspot.com
+0.0.0.0 2chmm.com
+0.0.0.0 alfalfalfa.com
+0.0.0.0 buzzfeed.com
+0.0.0.0 hamusoku.com
+0.0.0.0 himasoku.com
+0.0.0.0 labo.tv
+0.0.0.0 nanj-matome.com
+0.0.0.0 newmatosoku.com
+0.0.0.0 news4vip.livedoor.biz
+0.0.0.0 seijichishin.com
+0.0.0.0 yutura.net
+
+# SNS
+0.0.0.0 tiktok.com www.tiktok.com m.tiktok.com
+0.0.0.0 video.twimg.com pbs.twimg.com
+0.0.0.0 giphy.com tenor.com imgur.com www.tumblr.com tumblr.com

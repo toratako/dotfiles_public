@@ -37,6 +37,7 @@ fd
 ffmpeg
 filelight
 fzf
+ghostty
 ghq
 gimp
 git

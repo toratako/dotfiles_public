@@ -1,6 +1,6 @@
 README.md
 
-memo/
-
 .gitignore
 .vscode/
+symlink/
+memo/
