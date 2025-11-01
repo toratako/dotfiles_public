@@ -27,4 +27,5 @@ export FZF_ALT_C_COMMAND="fd --type d --hidden --follow $FD_EXCLUDE"
 export FZF_CTRL_T_OPTS="--walker-skip .git,node_modules,target --preview 'bat -n --color=always {}' --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 export FZF_ALT_C_OPTS="--walker-skip .git,node_modules,target --preview 'tree -C {}'"
 
+# Thanks: https://dev.classmethod.jp/articles/zsh-time-command-formatting-like-bash/
 export TIMEFMT=$'\n\n========================\nProgram : %J\nCPU     : %P\nuser    : %*Us\nsystem  : %*Ss\ntotal   : %*Es\n========================\n'
