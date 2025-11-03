@@ -1,3 +1,5 @@
+# LICENSE: CC0 1.0
+
 KDROIDWIN_UBLACKLIST_FILTER_URL = "https://raw.githubusercontent.com/Kdroidwin/uBlacklist-filter-by-kdroidwin/refs/heads/main/uBlacklist.txt"
 
 

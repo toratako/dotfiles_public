@@ -1,2 +1,405 @@
-{ // REDACTED.
+{
+    // My settings for VSCodium!
+    // Text Editor
+    // Editor
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.minimap.maxColumn": 90,
+    "editor.minimap.showSlider": "always",
+    "editor.rename.enablePreview": false,
+    "editor.renderLineHighlight": "all",
+    "editor.renderWhitespace": "boundary",
+    "editor.stickyScroll.enabled": true,
+    "editor.wordWrap": "on",
+    "editor.renderControlCharacters": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.fontFamily": "'Hack Nerd Font', monospace",
+    "editor.unicodeHighlight.includeComments": true,
+    "editor.linkedEditing": true,
+    // "editor.parameterHints.enabled": false,
+    "files.autoSave": "afterDelay",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    // "files.trimTrailingWhitespace": true,
+    // Workbench
+    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.editor.scrollToSwitchTabs": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "none",
+    "workbench.tips.enabled": false,
+    "workbench.tree.renderIndentGuides": "always",
+    "zenMode.hideLineNumbers": false,
+    // Window
+    "window.commandCenter": true,
+    "window.customTitleBarVisibility": "auto",
+    "window.openFilesInNewWindow": "default",
+    "window.title": "${dirty}${rootName}${separator}${activeEditorShort}${separator}",
+    "window.titleBarStyle": "custom",
+    "window.titleSeparator": " | ",
+    // "window.menuBarVisibility": "visible", // default?
+    // Features
+    // Search
+    "search.showLineNumbers": true,
+    // Explorer
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "explorer.autoReveal": false,
+    // Terminal
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorWidth": 2,
+    "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+    "terminal.integrated.scrollback": 5000,
+    // screencast mode
+    "screencastMode.fontSize": 64,
+    "screencastMode.keyboardOverlayTimeout": 1000,
+    "screencastMode.mouseIndicatorColor": "#FF8800",
+    "screencastMode.mouseIndicatorSize": 40,
+    "screencastMode.keyboardOptions": {
+        "showKeys": false
+    },
+    "problems.showCurrentInStatus": true,
+    // Application
+    "update.mode": "none",
+    "telemetry.feedback.enabled": false,
+    // Security
+    // Language specific
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+    },
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.formatOnSave": true,
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.markdownlint": "explicit"
+        },
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+    },
+    "[c]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+        "editor.formatOnSave": true
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 4,
+    },
+    "[astro]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "astro-build.astro-vscode",
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features",
+        "editor.formatOnSave": true,
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.formatOnSave": true,
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.formatOnSave": true,
+    },
+    "[tex]": {
+        "editor.defaultFormatter": "James-Yu.latex-workshop",
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+    },
+    "[latex]": {
+        "editor.defaultFormatter": "James-Yu.latex-workshop",
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+    },
+    "[csharp]": {
+        "editor.defaultFormatter": "ms-dotnettools.csharp",
+    },
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    // Extensions
+    // Git
+    "git.suggestSmartCommit": false,
+    "git.confirmSync": false,
+    // detachhead.basedpyright
+    "basedpyright.analysis.diagnosticSeverityOverrides": {
+        "reportUnknownVariableType": "none",
+        "reportArgumentType": "none",
+        "reportReturnType": "none",
+        "reportUnknownMemberType": "none",
+        "reportUnannotatedClassAttribute": "none",
+        "reportMissingTypeArgument": "none",
+        "reportAny": "none",
+    },
+    "basedpyright.analysis.extraPaths": [
+        // load from project root venv
+        // !!warn needs periodic updates!!
+        "${workspaceFolder}/venv/lib/python3.14/site-packages",
+        "~/.local/share/mise/installs/python/3.14.0/lib/python3.14/site-packages"
+    ],
+    // llvm-vs-code-extensions.vscode-clangd
+    "clangd.fallbackFlags": [
+        "-Wall",
+        "-Wextra",
+        // "-Weverything",
+        "-Wnoc++98-compat"
+    ],
+    // usernamehw.errorlens
+    "errorLens.fontWeight": "300",
+    "errorLens.fontStyleItalic": true,
+    "errorLens.padding": "0.2px",
+    "errorLens.messageBackgroundMode": "message",
+    "errorLens.borderRadius": "1.8em 0.1em 1.8em 0.1em",
+    // streetsidesoftware.code-spell-checker
+    "cSpell.enabled": true,
+    "cSpell.ignoreWords": [
+        "addr",
+        "ASAN",
+        "binsh",
+        "chal",
+        "chall",
+        "checksec",
+        "execve",
+        "fastbin",
+        "FSOP",
+        "gdbscript",
+        "gdbserver",
+        "glibc",
+        "hexeditor",
+        "KASLR",
+        "largebin",
+        "libc",
+        "malloc",
+        "mmap",
+        "nmap",
+        "onegadget",
+        "pacman",
+        "Pentest",
+        "pwndbg",
+        "pwntools",
+        "readelf",
+        "recv",
+        "recvline",
+        "recvuntil",
+        "RELRO",
+        "ropchain",
+        "ropgadget",
+        "ropper",
+        "seccomp",
+        "sendafter",
+        "sendline",
+        "sendlineafter",
+        "setbuf",
+        "shellcode",
+        "smallbin",
+        "SMAP",
+        "SMEP",
+        "socat",
+        "SROP",
+        "syscall",
+        "tcache",
+        "TOCTOU",
+        "unistd",
+        "unsortedbin",
+        "vtable",
+    ],
+    // vivaxy.vscode-conventional-commits
+    "conventionalCommits.autoCommit": false,
+    "conventionalCommits.gitmoji": false,
+    "conventionalCommits.showNewVersionNotes": false,
+    // eamodio.gitlens
+    "gitlens.telemetry.enabled": false,
+    // ms-vscode.hexeditor
+    "hexeditor.maxFileSize": 100,
+    // cliffordfajardo.highlight-line-vscode
+    "highlightLine.borderStyle": "dashed",
+    "highlightLine.borderColor": "#CCCCCC",
+    "highlightLine.borderWidth": "1px",
+    // ms-python.python
+    "python.experiments.enabled": false,
+    "python.REPL.sendToNativeREPL": true,
+    "python.terminal.shellIntegration.enabled": false,
+    // charliermarsh.ruff
+    "ruff.lineLength": 80,
+    // github.copilot
+    "github.copilot.chat.localeOverride": "ja",
+    // esbenp.prettier-vscode
+    "prettier.tabWidth": 4,
+    // redhat.vscode-yaml
+    "redhat.telemetry.enabled": false,
+    // github.copilot
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false
+    },
+    // shd101wyy.markdown-preview-enhanced
+    "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
+    "markdown-preview-enhanced.mermaidTheme": "dark",
+    "markdown-preview-enhanced.previewTheme": "github-dark.css",
+    "markdown-preview-enhanced.revealjsTheme": "black.css",
+    // eamodio.gitlens
+    "gitlens.graph.minimap.dataType": "lines",
+    // ?
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.js",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        "tsconfig.json": "tsconfig.*.json",
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+        "Cargo.toml": "Cargo.lock",
+        "*.sqlite": "${capture}.${extname}-*",
+        "*.db": "${capture}.${extname}-*",
+        "*.sqlite3": "${capture}.${extname}-*",
+        "*.db3": "${capture}.${extname}-*",
+        "*.sdb": "${capture}.${extname}-*",
+        "*.s3db": "${capture}.${extname}-*"
+    },
+    // James-Yu.latex-workshop
+    // recipes -[load]-> tools
+    // I copied this but I forget where from... Sorry!
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "lualatex",
+            "tools": [
+                "lualatex"
+            ]
+        },
+        {
+            "name": "platex -> dvipdfmx",
+            "tools": [
+                "platex",
+                "platex",
+                "dvipdfmx"
+            ]
+        },
+        {
+            "name": "uplatex -> dvipdfmx",
+            "tools": [
+                "uplatex",
+                "uplatex",
+                "dvipdfmx"
+            ]
+        },
+        {
+            "name": "dvipdfmx",
+            "tools": [
+                "dvipdfmx"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "lualatex",
+            "command": "lualatex",
+            "args": [
+                "--cmdx",
+                "-file-line-error",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-halt-on-error",
+                "-output-directory=latex-output",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "platex",
+            "command": "platex",
+            "args": [
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-directory=latex-output",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "uplatex",
+            "command": "uplatex",
+            "args": [
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-directory=latex-output",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "dvipdfmx",
+            "command": "dvipdfmx",
+            "args": [
+                "latex-output/%DOCFILE%.dvi"
+            ]
+        },
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-e",
+                "$lualatex=q/lualatex %O -synctex=1 -interaction=nonstopmode -file-line-error %S/",
+                "-e",
+                "$bibtex=q/bibtexu %O %B/",
+                "-e",
+                "$biber=q/biber %O --bblencoding=utf8 -u -U --output_safechars %B/",
+                "-e",
+                "$makeindex=q/upmendex %O -o %D %S/",
+                "-norc",
+                "-gg",
+                "-pdflua",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipe.default": "lualatex",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.view.pdf.zoom": "page-width",
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.autoBuild.interval": 500,
+    "latex-workshop.latex.outDir": "./latex-output",
+    "latex-workshop.formatting.latex": "tex-fmt",
+    // 3w36zj6.textlint
+    // Need absolute path
+    "textlint.configPath": "/home/user/.config/.textlintrc.json",
+    // !!warn needs periodic updates!!
+    "textlint.nodePath": "/home/user/.local/share/mise/installs/node/25.0.0/lib/node_modules",
+    "textlint.languages": [
+        "markdown",
+        "text",
+        "plaintext",
+        "tex",
+        "latex"
+    ],
+    "textlint.run": "onType",
+    // ltex-plus.vscode-ltex-plus
+    "ltex.diagnosticSeverity": {
+        "PASSIVE_VOICE": "information",
+        "default": "information"
+    },
+    "ltex.disabledRules": {
+        "en": []
+    },
+    "ltex.language": "en",
+    // ?
+    "makefile.configureOnOpen": true,
+    // uninstalled
+    // "rest-client.enableTelemetry": false,
+    // "code-runner.enableAppInsights": false,
+    // "color-highlight.markerType": "dot-after",
 }

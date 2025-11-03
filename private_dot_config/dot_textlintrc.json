@@ -1,0 +1,41 @@
+{
+  "plugins": {
+    "latex2e": false
+  },
+  "filters": {},
+  "rules": {
+    "terminology": true,
+    "preset-japanese": true,
+    "preset-ja-spacing": false,
+    "ja-hiraku": {
+      "daimeishi": true,
+      "fukujoshi": true,
+      "fukushi": false,
+      "hojodoushi": true,
+      "hojokeiyoushi": true,
+      "keishikimeishi": false,
+      "other-doushi": false,
+      "other-jodoushi": false,
+      "other-kandoushi": false,
+      "other-keiyoushi": false,
+      "other-meishi": false,
+      "rentaishi": true,
+      "setsuzokushi": true
+    },
+    "preset-ja-technical-writing": {
+      "ja-no-mixed-period": {
+        "periodMark": [
+          "。",
+          "．",
+          ":"
+        ]
+      },
+      "no-exclamation-question-mark": false
+    },
+    "@textlint-ja/preset-ai-writing": {
+      "ai-tech-writing-guideline": {
+        "severity": "info"
+      }
+    }
+  }
+}

@@ -40,6 +40,8 @@ alias py="python"
 alias yz="yazi"
 alias dol="dolphin . >/dev/null 2>&1 &"
 alias gpp="g++"
+alias ldocker="lazydocker"
+alias lgit="lazygit"
 alias wlcpy="wl-copy"
 alias wlpst="wl-paste"
 

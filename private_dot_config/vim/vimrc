@@ -5,10 +5,13 @@ set list listchars=tab:\>\-
 set mouse=a
 set virtualedit=onemore
 set showcmd
+set term=xterm-256color
 
 inoremap jj <Esc>
 nnoremap j gj
 nnoremap k gk
+
+" set wildmode=list:longest
 
 " Thanks: https://github.com/amix/vimrc
 
