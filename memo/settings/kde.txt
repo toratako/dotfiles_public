@@ -1,0 +1,75 @@
+Quick Settings:
+  Animation speed: Instant - 1
+
+Mouse & Touchpad:
+  Mouse:
+    Pointer speed: 0.54
+    Enable pointer acceleration: Disabled
+    Scrolling speed: 5 (1index)
+
+Keyboard:
+  Keyboard:
+   Layouts:
+     Generic 104-key PC
+     Japanese
+  Virtual Keyboard: Fcitx 5 Wayland Launcher
+  Shortcuts:
+    Window Management:
+      Keep Window Above Others: Meta+K
+
+Display & Monitor:
+  Night Light:
+    2700K
+    Always on night light
+
+Accessibility:
+  System Bell:
+    Audible bell: Disabled
+  Shake Cursor:
+    Shake cursor to find it: Disabled
+
+Colors & Themes:
+  Global Theme: Breeze Dark
+    Colors: Breeze Dark
+    Plasma Style: Breeze Dark
+    System Sounds: Ocean
+    Splash Screen: None
+
+Text & Fonts:
+  Fonts:
+    Fixed width: Hack Nerd Font 10pt
+    Sub-pixel rendering: None (why?)
+
+Animations:
+  Global animation speed: Instant - 1
+
+Default Applications:
+  Video player: Haruna
+  Terminal emulator: Ghostty
+
+Window Management:
+  Virtual Desktops:
+    Rows: 1
+
+General Behavior:
+  Scrolling:
+    Prefer smooth scrolling: Disabled (hotfix)
+
+Search:
+  File Search: File indexing: Disabled
+  Plasma Search:
+    Applications
+    System Settings
+    Calculator
+    Colors
+    Locations
+    Unit Converter
+
+Recent Files:
+  Remember opened documents: Do not Remember
+
+User Feedback: Disabled
+
+Power Management:
+  Suspend Session:
+    When inactive: Do nothing (for SSH)
