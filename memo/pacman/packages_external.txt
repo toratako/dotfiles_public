@@ -1,5 +1,6 @@
 android-apktool-bin
 android-studio
+flatter-git
 imhex-bin
 readpe
 tex-fmt-bin

@@ -24,6 +24,7 @@ sudo systemctl enable --now docker.service
 sudo usermod -aG docker $USER
 
 sudo systemctl enable --now ollama.service
+
 sudo systemctl enable --now tailscaled
 sudo tailscale up
 
@@ -34,6 +35,8 @@ sudo virsh net-autostart default
 
 sudo pacman -S firewalld
 sudo systemctl enable --now firewalld
+
+sudo pacman -S fcitx5-chinese-addons
 
 mise install node
 mise install python
@@ -47,8 +50,8 @@ rustup default stable
 gem install seccomp-tools racc
 gem install zsteg
 
-uv pip install --system angr pwntools pycryptodome numpy sympy scipy matplotlib scapy gmpy2
-uv pip install --system requests beautifulsoup4 pillow opencv-python pandas rich python-dotenv
+uv pip install --system angr pwntools pycryptodome numpy sympy scipy matplotlib scapy gmpy2 unicorn capstone z3-solver pyelftools
+uv pip install --system requests beautifulsoup4 pillow opencv-python pandas rich python-dotenv zstandard setuptools
 uv pip install --system basedpyright
 uv tool install git+https://github.com/RsaCtfTool/RsaCtfTool
 ```

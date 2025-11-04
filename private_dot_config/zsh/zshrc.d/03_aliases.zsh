@@ -13,6 +13,7 @@ alias ls="eza --group-directories-first -1 -l -F -a -b --icons=always"
 alias ps="ps auxf"
 alias pwninit='pwninit --template-path ~/.config/pwninit-template.py'
 alias tree="tree --dirsfirst -C -a -I '.git|node_modules|.cache'"
+alias checksec="/bin/checksec"
 
 ### With color
 alias diff="diff --color=always"
