@@ -32,6 +32,11 @@
     stp = stash pop
     stl = stash list
 
+    wt = worktree
+    wta = worktree add
+    wtr = worktree remove
+    wtl = worktree list
+
     s = status -sb
     unstage = reset HEAD --
     uncommit = reset --soft HEAD~1
