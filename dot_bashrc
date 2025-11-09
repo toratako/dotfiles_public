@@ -1,0 +1,65 @@
+# Minimal ~/.bashrc
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# Path
+for p in \
+  "$HOME/.cargo/bin" \
+  "$HOME/.local/bin"
+do
+  case ":$PATH:" in
+    *":$p:"*) :;;
+    *) PATH="$p:$PATH";;
+  esac
+done
+export PATH
+
+# Aliases
+alias ll="ls -alF --color=auto"
+alias la="ls -A --color=auto"
+alias l="ls -CF --color=auto"
+
+alias ls="ls --color=auto"
+alias grep="grep --color=auto"
+alias diff="diff --color=auto"
+alias ip="ip -color=auto"
+alias fgrep="fgrep --color=auto"
+alias egrep="egrep --color=auto"
+
+alias df="df -h"
+alias du="du -h"
+
+alias vi="vim"
+alias g="git"
+alias d="docker"
+
+alias "..."="cd ./../../"
+alias "...."="cd ./../../../"
+alias "cd.."="cd ./.."
+alias "cd..."="cd ./../../"
+alias "cd...."="cd ./../../../"
+
+# Options
+export PS1="\n\w\n> "
+export TERM=xterm
+export EDITOR=vim
+
+# Settings
+shopt -s autocd
+shopt -s checkwinsize
+shopt -s dirspell
+shopt -s cdspell
+shopt -s no_empty_cmd_completion
+
+# History settings
+shopt -s histappend
+shopt -s cmdhist
+export HISTSIZE=50000
+export HISTFILESIZE=50000
+export HISTCONTROL=ignoreboth
+
+# Glob settings
+shopt -s extglob
+shopt -s globstar
+shopt -u nocaseglob

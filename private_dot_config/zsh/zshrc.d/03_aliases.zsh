@@ -14,12 +14,16 @@ alias ps="ps auxf"
 alias pwninit='pwninit --template-path ~/.config/pwninit-template.py'
 alias tree="tree --dirsfirst -C -a -I '.git|node_modules|.cache'"
 alias checksec="/bin/checksec"
+alias df="df -h"
+alias du="du -h"
 
 ### With color
 alias diff="diff --color=always"
 alias find="fd --color=always --hidden --follow $FD_EXCLUDE"
 alias grep="rg --color=always"
 alias ip="ip -color=always"
+alias fgrep="fgrep --color=auto"
+alias egrep="egrep --color=auto"
 
 ### Just overrides
 alias code="vscodium"
@@ -45,6 +49,8 @@ alias ldocker="lazydocker"
 alias lgit="lazygit"
 alias wlcpy="wl-copy"
 alias wlpst="wl-paste"
+alias ll="ls -alF --color=auto"
+alias la="ls -A --color=auto"
 
 ## Custom aliases
 alias beep="notify-send \"Finished\""
@@ -68,11 +74,11 @@ alias tarxz="tar -cvJf"
 alias tartar="tar -cvf"
 
 ## cd shortcuts
-alias "..."="cd ./../"
-alias "...."="cd ./../../"
+alias "..."="cd ./../../"
+alias "...."="cd ./../../../"
 alias "cd.."="cd ./.."
-alias "cd..."="cd ./../"
-alias "cd...."="cd ./../../"
+alias "cd..."="cd ./../../"
+alias "cd...."="cd ./../../../"
 
 ## Restore
 alias ccat="/usr/bin/cat"

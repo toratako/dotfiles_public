@@ -51,7 +51,7 @@ gem install seccomp-tools racc
 gem install zsteg
 
 uv pip install --system angr pwntools pycryptodome numpy sympy scipy matplotlib scapy gmpy2 unicorn capstone z3-solver pyelftools
-uv pip install --system requests beautifulsoup4 pillow opencv-python pandas rich python-dotenv zstandard setuptools
+uv pip install --system requests beautifulsoup4 pillow opencv-python pandas rich python-dotenv zstandard setuptools impacket yara-python
 uv pip install --system basedpyright
 uv tool install git+https://github.com/RsaCtfTool/RsaCtfTool
 ```
