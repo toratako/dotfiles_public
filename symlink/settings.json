@@ -136,14 +136,16 @@
     },
     // Extensions
     // Git
+    "git.blame.editorDecoration.enabled": true,
     "git.suggestSmartCommit": false,
     "git.confirmSync": false,
     // detachhead.basedpyright
     "basedpyright.analysis.diagnosticSeverityOverrides": {
         "reportUnknownVariableType": "none",
+        "reportUnknownArgumentType": "none",
+        "reportUnknownMemberType": "none",
         "reportArgumentType": "none",
         "reportReturnType": "none",
-        "reportUnknownMemberType": "none",
         "reportUnannotatedClassAttribute": "none",
         "reportMissingTypeArgument": "none",
         "reportAny": "none",
@@ -254,10 +256,6 @@
     "gitlens.telemetry.enabled": false,
     // ms-vscode.hexeditor
     "hexeditor.maxFileSize": 100,
-    // cliffordfajardo.highlight-line-vscode
-    "highlightLine.borderStyle": "dashed",
-    "highlightLine.borderColor": "#CCCCCC",
-    "highlightLine.borderWidth": "1px",
     // ms-python.python
     "python.experiments.enabled": false,
     "python.REPL.sendToNativeREPL": true,
@@ -282,8 +280,6 @@
     "markdown-preview-enhanced.mermaidTheme": "dark",
     "markdown-preview-enhanced.previewTheme": "github-dark.css",
     "markdown-preview-enhanced.revealjsTheme": "black.css",
-    // eamodio.gitlens
-    "gitlens.graph.minimap.dataType": "lines",
     // ?
     "explorer.fileNesting.patterns": {
         "*.ts": "${capture}.js",
@@ -424,10 +420,6 @@
     "ltex.language": "en",
     // ?
     "makefile.configureOnOpen": true,
-    // uninstalled
-    // "rest-client.enableTelemetry": false,
-    // "code-runner.enableAppInsights": false,
-    // "color-highlight.markerType": "dot-after",
     // i set this environment variables at my shell profile, but GUI apps don't inherit them by default.
     // ~/.config/environment.d/*.conf for this purpose.
     "rust-analyzer.server.extraEnv": {
@@ -439,5 +431,9 @@
         "F403",
         "F405",
         "E722"
-    ]
+    ],
+    // uninstalled
+    // "rest-client.enableTelemetry": false,
+    // "code-runner.enableAppInsights": false,
+    // "color-highlight.markerType": "dot-after",
 }
