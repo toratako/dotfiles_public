@@ -1,11 +1,16 @@
 amd-ucode
 amdgpu_top
 blender
+flatpak
+gource
 inkscape
 intel-ucode
 libreoffice-still
+multilib-devel
 neovim
 obs-studio
+ollama-rocm
 texlive
 texlive-langcjk
 texlive-langjapanese
+zint-qt

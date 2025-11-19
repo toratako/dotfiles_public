@@ -400,7 +400,7 @@
     // Need absolute path
     "textlint.configPath": "/home/user/.config/.textlintrc.json",
     // !!warn needs periodic updates!!
-    "textlint.nodePath": "/home/user/.local/share/mise/installs/node/25.0.0/lib/node_modules",
+    "textlint.nodePath": "/home/user/.local/share/mise/installs/node/25.2.1/lib/node_modules",
     "textlint.languages": [
         "markdown",
         "text",

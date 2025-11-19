@@ -6,7 +6,7 @@
       "overridden": false
     },
     "@google/gemini-cli": {
-      "version": "0.11.3",
+      "version": "0.16.0",
       "overridden": false
     },
     "@marp-team/marp-cli": {
@@ -18,7 +18,7 @@
       "overridden": false
     },
     "corepack": {
-      "version": "0.34.2",
+      "version": "0.34.4",
       "overridden": false
     },
     "npm": {
@@ -70,7 +70,7 @@
       "overridden": false
     },
     "textlint": {
-      "version": "15.2.3",
+      "version": "15.4.0",
       "overridden": false
     }
   }

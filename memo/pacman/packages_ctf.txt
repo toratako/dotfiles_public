@@ -1,3 +1,5 @@
+afl-utils
+afl++
 binsider
 binwalk
 bpftrace
@@ -15,13 +17,13 @@ perl-image-exiftool
 pwndbg
 pwninit
 python-ecdsa
-ropgadget
 python-igraph
 python-pycryptodome
 python-r2pipe
 python-rzpipe
 r2ghidra
 radare2
+ropgadget
 ropper
 rz-cutter
 rz-ghidra
@@ -29,5 +31,6 @@ sagemath
 strace
 tracexec
 upx
+valgrind
 wabt
 wireshark-qt

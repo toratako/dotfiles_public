@@ -5,7 +5,11 @@
   "filters": {},
   "rules": {
     "terminology": true,
-    "preset-japanese": true,
+    "preset-japanese": {
+      "sentence-length": {
+        "max": 3000
+      }
+    },
     "preset-ja-spacing": false,
     "ja-hiraku": {
       "daimeishi": true,
@@ -29,6 +33,12 @@
           "．",
           ":"
         ]
+      },
+      "max-comma": {
+        "max": 20
+      },
+      "sentence-length": {
+        "max": 3000
       },
       "no-exclamation-question-mark": false
     },

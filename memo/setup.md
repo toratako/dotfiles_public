@@ -50,8 +50,8 @@ rustup default stable
 gem install seccomp-tools racc
 gem install zsteg
 
-uv pip install --system angr pwntools pycryptodome numpy sympy scipy matplotlib scapy gmpy2 unicorn capstone z3-solver pyelftools
-uv pip install --system requests beautifulsoup4 pillow opencv-python pandas rich python-dotenv zstandard setuptools impacket yara-python
-uv pip install --system basedpyright
+uv pip install --system -r requirements.txt
+uv pip install --system https://github.com/qilingframework/qiling/archive/dev.zip
+uv pip install --system git+https://github.com/cea-sec/miasm
 uv tool install git+https://github.com/RsaCtfTool/RsaCtfTool
 ```

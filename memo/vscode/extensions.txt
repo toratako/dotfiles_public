@@ -34,8 +34,6 @@ streetsidesoftware.code-spell-checker
 stylelint.vscode-stylelint
 tamasfe.even-better-toml
 usernamehw.errorlens
-visualstudioexptteam.intellicode-api-usage-examples
-visualstudioexptteam.vscodeintellicode
 vivaxy.vscode-conventional-commits
 yzhang.markdown-all-in-one
 ziglang.vscode-zig
