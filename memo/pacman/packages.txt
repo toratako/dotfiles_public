@@ -30,7 +30,11 @@ fzf
 ghq
 git
 git-absorb
+git-branchless
+git-cliff
 git-delta
+git-filter-repo
+git-lfs
 github-cli
 glow
 go

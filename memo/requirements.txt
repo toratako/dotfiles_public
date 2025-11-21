@@ -7,6 +7,7 @@ frida
 frida-tools
 gmpy2
 impacket
+lief
 matplotlib
 numpy
 opencv-python
