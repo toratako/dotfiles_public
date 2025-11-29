@@ -54,4 +54,12 @@ uv pip install --system -r requirements.txt
 uv pip install --system https://github.com/qilingframework/qiling/archive/dev.zip
 uv pip install --system git+https://github.com/cea-sec/miasm
 uv tool install git+https://github.com/RsaCtfTool/RsaCtfTool
+uv tool install angr-management
 ```
+
+## Links
+
+<https://wiki.archlinux.org/title/General_recommendations>  
+<https://github.com/DNSCrypt/dnscrypt-proxy/wiki/installation>  
+<https://dnscrypt.info/public-servers/>  
+<https://wiki.archlinux.org/title/Chrony>  
