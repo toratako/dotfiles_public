@@ -41,6 +41,7 @@ go
 gperf
 grc
 hblock
+helix
 hexedit
 hexyl
 hugo
@@ -50,6 +51,8 @@ jq
 lazydocker
 lazygit
 lesspipe
+libfaketime
+libva-utils
 libvirt
 lrzsz
 lsof

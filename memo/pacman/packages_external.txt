@@ -1,6 +1,7 @@
 android-apktool-bin
 android-studio
 flatter-git
+hashcash
 imhex-bin
 readpe
 tex-fmt-bin
