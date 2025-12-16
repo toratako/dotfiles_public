@@ -3,6 +3,7 @@ android-studio
 flatter-git
 hashcash
 imhex-bin
+ltex-ls-plus-bin
 readpe
 tex-fmt-bin
 uftrace-git

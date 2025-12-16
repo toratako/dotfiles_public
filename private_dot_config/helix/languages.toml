@@ -1,0 +1,147 @@
+[language-server.typos]
+command = "typos-lsp"
+environment = { "RUST_LOG" = "error" }
+config.diagnosticSeverity = "Info"
+
+# ---
+
+[language-server.basedpyright.config.basedpyright.analysis.diagnosticSeverityOverrides]
+reportUnknownVariableType = "none"
+reportUnknownArgumentType = "none"
+reportUnknownMemberType = "none"
+reportArgumentType = "none"
+reportReturnType = "none"
+reportUnannotatedClassAttribute = "none"
+reportMissingTypeArgument = "none"
+reportAny = "none"
+
+[language-server.ruff]
+command = "ruff"
+args = ["server", "--preview"]
+
+[language-server.ruff.config.settings]
+args = ["--ignore", "E501"]
+
+[language-server.ty]
+command = "ty"
+args = ["server"]
+
+[language-server.ty.config]
+inlayHints.callArgumentNames = false
+experimental.rename = true
+experimental.autoImport = true
+
+[[language]]
+name = "python"
+language-servers = ["basedpyright", "ruff"]
+auto-format = true
+
+# ---
+
+# [language-server.oxlint]
+# command = "oxc_language_server"
+
+[language-server]
+biome = { command = "biome", args = ["lsp-proxy"] }
+
+[[language]]
+name = "javascript"
+language-servers = [
+    { name = "typescript-language-server", except-features = [
+        "format",
+    ] },
+    "biome",
+    "typos",
+]
+auto-format = true
+
+[[language]]
+name = "typescript"
+language-servers = [
+    { name = "typescript-language-server", except-features = [
+        "format",
+    ] },
+    "biome",
+    "typos",
+]
+auto-format = true
+
+[[language]]
+name = "tsx"
+auto-format = true
+language-servers = [
+    { name = "typescript-language-server", except-features = [
+        "format",
+    ] },
+    "biome",
+    "typos",
+]
+
+[[language]]
+name = "jsx"
+auto-format = true
+language-servers = [
+    { name = "typescript-language-server", except-features = [
+        "format",
+    ] },
+    "biome",
+    "typos",
+]
+
+[[language]]
+name = "json"
+language-servers = [
+    { name = "vscode-json-language-server", except-features = [
+        "format",
+    ] },
+    "biome",
+    "typos",
+]
+
+# ---
+
+[[language]]
+name = "html"
+formatter = { command = "prettier", args = ["--parser", "html"] }
+auto-format = true
+
+[[language]]
+name = "css"
+formatter = { command = "prettier", args = ["--parser", "css"] }
+auto-format = true
+
+# ---
+
+[[language]]
+name = "c"
+formatter = { command = "clang-format" }
+auto-format = true
+
+[[language]]
+name = "cpp"
+language-servers = ["clangd"]
+formatter = { command = "clang-format" }
+auto-format = true
+
+# ---
+
+[[language]]
+name = "latex"
+formatter = { command = "latexindent" }
+auto-format = true
+
+# ---
+
+[language-server]
+ltex-ls-plus = { command = "ltex-ls-plus" }
+
+[[language]]
+name = "markdown"
+language-servers = ["markdown-oxide", "ltex-ls-plus"]
+formatter = { command = "prettier", args = ["--parser", "markdown"] }
+
+# ---
+
+[[language]]
+name = "rust"
+auto-format = true

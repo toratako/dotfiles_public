@@ -25,6 +25,18 @@
       "version": "11.7.0",
       "overridden": false
     },
+    "oxfmt": {
+      "version": "0.17.0",
+      "overridden": false
+    },
+    "oxlint": {
+      "version": "1.32.0",
+      "overridden": false
+    },
+    "prettier": {
+      "version": "3.7.4",
+      "overridden": false
+    },
     "textlint-plugin-latex2e": {
       "version": "1.2.1",
       "overridden": false
@@ -71,6 +83,14 @@
     },
     "textlint": {
       "version": "15.5.0",
+      "overridden": false
+    },
+    "typescript-language-server": {
+      "version": "5.1.3",
+      "overridden": false
+    },
+    "vscode-langservers-extracted": {
+      "version": "4.10.0",
       "overridden": false
     }
   }

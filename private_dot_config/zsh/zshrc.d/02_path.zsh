@@ -3,11 +3,12 @@
 # !!warn!! needs periodic updates (mise)
 typeset -U PATH path
 path=(
-    "$HOME/.dotnet/tools"
     "$HOME/.cargo/bin"
+    "$HOME/.dotnet/tools"
     "$HOME/.local/bin"
-    "$HOME/perl5/bin"
     "$HOME/.local/share/gem/ruby/3.4.0/bin"
+    "$HOME/.nimble/bin"
+    "$HOME/perl5/bin"
     $path
 )
 export PATH

@@ -34,3 +34,4 @@ upx
 valgrind
 wabt
 wireshark-qt
+zydis

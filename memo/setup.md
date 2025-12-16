@@ -46,6 +46,7 @@ mise use -g node
 mise use -g ruby
 
 rustup default stable
+rustup component add rust-analyzer
 
 gem install seccomp-tools racc
 gem install zsteg
@@ -55,6 +56,9 @@ uv pip install --system https://github.com/qilingframework/qiling/archive/dev.zi
 uv pip install --system git+https://github.com/cea-sec/miasm
 uv tool install git+https://github.com/RsaCtfTool/RsaCtfTool
 uv tool install angr-management
+uv tool install ty@latest
+
+nimble install nimlangserver
 ```
 
 ## Links
