@@ -47,6 +47,7 @@ mise use -g ruby
 
 rustup default stable
 rustup component add rust-analyzer
+cargo install asm-lsp
 
 gem install seccomp-tools racc
 gem install zsteg

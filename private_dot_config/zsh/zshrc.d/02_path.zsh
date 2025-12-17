@@ -9,6 +9,7 @@ path=(
     "$HOME/.local/share/gem/ruby/3.4.0/bin"
     "$HOME/.nimble/bin"
     "$HOME/perl5/bin"
+    "$CARGO_HOME/bin"
     $path
 )
 export PATH
