@@ -132,8 +132,8 @@ auto-format = true
 
 # ---
 
-[language-server]
-ltex-ls-plus = { command = "ltex-ls-plus" }
+[language-server.ltex-ls-plus]
+command = "ltex-ls-plus"
 
 [[language]]
 name = "markdown"
