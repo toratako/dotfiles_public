@@ -351,15 +351,7 @@
   "gem": [
     "seccomp-tools",
     "racc",
-    "gem",
-    "install",
-    "zsteg",
-    "uv",
-    "pip",
-    "install",
-    "--system",
-    "-r",
-    "requirements"
+    "zsteg"
   ],
   "nimble": [
     "nimlangserver"

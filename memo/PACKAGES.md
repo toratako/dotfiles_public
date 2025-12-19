@@ -19,7 +19,7 @@ Located in `pacman/` directory:
 ### Development Tools
 - **`vscode/extensions.txt`** - VSCode extensions (39 packages)
 - **Cargo packages** - Listed in `setup.md` (1 package)
-- **Ruby Gems** - Listed in `setup.md` (11 packages)
+- **Ruby Gems** - Listed in `setup.md` (3 packages)
 - **Nimble packages** - Listed in `setup.md` (1 package)
 - **uv tools** - Listed in `setup.md` (3 packages)
 
@@ -66,12 +66,12 @@ The script generates `all_packages.json` containing:
 
 ### Statistics (as of last run)
 
-- **Total packages**: 344
+- **Total packages**: 336
 - **Pacman packages**: 219 (across 5 categories)
 - **Python packages**: 47
 - **NPM packages**: 23
 - **VSCode extensions**: 39
-- **Other tools**: 16
+- **Other tools**: 8
 
 ## 🎯 Interest Areas
 

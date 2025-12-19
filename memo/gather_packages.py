@@ -95,12 +95,14 @@ def gather_gem_packages() -> List[str]:
     
     packages = []
     with open(filepath, 'r', encoding='utf-8') as f:
-        content = f.read()
-    
-    # Find gem install commands
-    gem_matches = re.findall(r'gem install\s+([a-zA-Z0-9_-]+(?:\s+[a-zA-Z0-9_-]+)*)', content)
-    for match in gem_matches:
-        packages.extend(match.split())
+        for line in f:
+            line = line.strip()
+            if line.startswith('gem install'):
+                # Extract package names after 'gem install'
+                parts = line.split('gem install', 1)
+                if len(parts) > 1:
+                    pkg_names = parts[1].strip().split()
+                    packages.extend(pkg_names)
     
     return packages
 
