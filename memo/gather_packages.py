@@ -68,81 +68,73 @@ def gather_vscode_extensions() -> List[str]:
     return read_lines(filepath)
 
 
-def gather_cargo_packages() -> List[str]:
+def _read_setup_md() -> str:
+    """Read the setup.md file once for all extractors."""
+    filepath = Path(__file__).parent / 'setup.md'
+    if not filepath.exists():
+        return ""
+    with open(filepath, 'r', encoding='utf-8') as f:
+        return f.read()
+
+
+def gather_cargo_packages(setup_content: str = None) -> List[str]:
     """Gather Cargo packages from setup.md."""
-    filepath = Path(__file__).parent / 'setup.md'
+    if setup_content is None:
+        setup_content = _read_setup_md()
     
-    if not filepath.exists():
+    if not setup_content:
         return []
     
-    packages = []
-    with open(filepath, 'r', encoding='utf-8') as f:
-        content = f.read()
-    
-    # Find cargo install commands
-    cargo_matches = re.findall(r'cargo install\s+([a-zA-Z0-9_-]+)', content)
-    packages.extend(cargo_matches)
-    
-    return packages
+    # Find cargo install commands - allow dots and more characters in package names
+    cargo_matches = re.findall(r'cargo install\s+(\S+)', setup_content)
+    return cargo_matches
 
 
-def gather_gem_packages() -> List[str]:
+def gather_gem_packages(setup_content: str = None) -> List[str]:
     """Gather Ruby Gem packages from setup.md."""
-    filepath = Path(__file__).parent / 'setup.md'
+    if setup_content is None:
+        setup_content = _read_setup_md()
     
-    if not filepath.exists():
+    if not setup_content:
         return []
     
     packages = []
-    with open(filepath, 'r', encoding='utf-8') as f:
-        for line in f:
-            line = line.strip()
-            if line.startswith('gem install'):
-                # Extract package names after 'gem install'
-                parts = line.split('gem install', 1)
-                if len(parts) > 1:
-                    pkg_names = parts[1].strip().split()
-                    packages.extend(pkg_names)
+    for line in setup_content.split('\n'):
+        line = line.strip()
+        if line.startswith('gem install'):
+            # Extract package names after 'gem install'
+            parts = line.split('gem install', 1)
+            if len(parts) > 1:
+                pkg_names = parts[1].strip().split()
+                packages.extend(pkg_names)
     
     return packages
 
 
-def gather_nimble_packages() -> List[str]:
+def gather_nimble_packages(setup_content: str = None) -> List[str]:
     """Gather Nimble packages from setup.md."""
-    filepath = Path(__file__).parent / 'setup.md'
+    if setup_content is None:
+        setup_content = _read_setup_md()
     
-    if not filepath.exists():
+    if not setup_content:
         return []
     
-    packages = []
-    with open(filepath, 'r', encoding='utf-8') as f:
-        content = f.read()
-    
-    # Find nimble install commands
-    nimble_matches = re.findall(r'nimble install\s+([a-zA-Z0-9_-]+)', content)
-    packages.extend(nimble_matches)
-    
-    return packages
+    # Find nimble install commands - allow dots and more characters in package names
+    nimble_matches = re.findall(r'nimble install\s+(\S+)', setup_content)
+    return nimble_matches
 
 
-def gather_uv_tools() -> List[str]:
+def gather_uv_tools(setup_content: str = None) -> List[str]:
     """Gather uv tool packages from setup.md."""
-    filepath = Path(__file__).parent / 'setup.md'
+    if setup_content is None:
+        setup_content = _read_setup_md()
     
-    if not filepath.exists():
+    if not setup_content:
         return []
     
-    tools = []
-    with open(filepath, 'r', encoding='utf-8') as f:
-        content = f.read()
-    
-    # Find uv tool install commands
-    # Match both regular packages and git URLs
-    uv_matches = re.findall(r'uv tool install\s+(.+)', content)
-    for match in uv_matches:
-        tools.append(match.strip())
-    
-    return tools
+    # Find uv tool install commands - match both regular packages and git URLs
+    uv_matches = re.findall(r'uv tool install\s+(.+)', setup_content)
+    return [match.strip() for match in uv_matches]
 
 
 def main():
@@ -179,27 +171,30 @@ def main():
     all_packages['vscode_extensions'] = vscode
     print(f"  ✓ Found {len(vscode)} VSCode extensions")
     
+    # Read setup.md once for all extractors
+    setup_content = _read_setup_md()
+    
     # Gather Cargo packages
     print("[5/8] Gathering Cargo packages...")
-    cargo = gather_cargo_packages()
+    cargo = gather_cargo_packages(setup_content)
     all_packages['cargo'] = cargo
     print(f"  ✓ Found {len(cargo)} Cargo packages")
     
     # Gather Gem packages
     print("[6/8] Gathering Ruby Gem packages...")
-    gems = gather_gem_packages()
+    gems = gather_gem_packages(setup_content)
     all_packages['gem'] = gems
     print(f"  ✓ Found {len(gems)} Ruby Gem packages")
     
     # Gather Nimble packages
     print("[7/8] Gathering Nimble packages...")
-    nimble = gather_nimble_packages()
+    nimble = gather_nimble_packages(setup_content)
     all_packages['nimble'] = nimble
     print(f"  ✓ Found {len(nimble)} Nimble packages")
     
     # Gather uv tools
     print("[8/8] Gathering uv tool packages...")
-    uv_tools = gather_uv_tools()
+    uv_tools = gather_uv_tools(setup_content)
     all_packages['uv_tools'] = uv_tools
     print(f"  ✓ Found {len(uv_tools)} uv tool packages")
     
@@ -261,20 +256,23 @@ def main():
     all_package_names.extend(cargo)
     all_package_names.extend(gems)
     
-    # Look for common themes
+    # Look for common themes using more precise matching
     if any('git' in pkg.lower() for pkg in all_package_names):
         interests.add("Git/Version Control")
     if len(pacman.get('ctf', [])) > 0 or any('pwn' in pkg.lower() or 'gdb' in pkg.lower() for pkg in all_package_names):
         interests.add("CTF/Security/Reverse Engineering")
     if any('docker' in pkg.lower() or 'podman' in pkg.lower() for pkg in all_package_names):
         interests.add("Containers/Virtualization")
-    if any('python' in pkg.lower() or 'py' in pkg.lower() for pkg in all_package_names):
+    # More precise Python detection
+    if len(python) > 0 or any(pkg.lower().startswith('python') or pkg.lower().startswith('py-') for pkg in all_package_names):
         interests.add("Python Development")
-    if any('rust' in pkg.lower() or 'cargo' in pkg.lower() for pkg in all_package_names):
+    if any('rust' in pkg.lower() or pkg.lower() == 'rustup' for pkg in all_package_names) or len(cargo) > 0:
         interests.add("Rust Development")
-    if any('go' in pkg.lower() or 'golang' in pkg.lower() for pkg in all_package_names):
+    # More precise Go detection - check for exact matches or specific packages
+    if any(pkg.lower() in ['go', 'gopls'] or pkg.lower().startswith('go-') for pkg in all_package_names):
         interests.add("Go Development")
-    if any('vim' in pkg.lower() or 'neovim' in pkg.lower() or 'helix' in pkg.lower() for pkg in all_package_names):
+    # More precise editor detection using word boundaries
+    if any(pkg.lower() in ['vim', 'neovim', 'helix'] for pkg in all_package_names):
         interests.add("Text Editors/IDEs")
     if any('latex' in pkg.lower() or 'tex' in pkg.lower() or 'typst' in pkg.lower() for pkg in all_package_names):
         interests.add("Document Typesetting")
