@@ -1,9 +1,52 @@
+# Language configuration for Helix
+
+# ---
+# for all languages
+
+# Minimal false positive spell checker
+# Alternative: efm + cSpell (Better)
 [language-server.typos]
 command = "typos-lsp"
 environment = { "RUST_LOG" = "error" }
 config.diagnosticSeverity = "Info"
 
+# Grammar checker
+# Alternative: LTeX (Better)
+[language-server.harper-ls]
+command = "harper-ls"
+args = ["--stdio"]
+
+[language-server.harper-ls.config.harper-ls.linters]
+spaces = false
+
+# LTeX LanguageServer Plus (Uses LanguageTool)
+# Good grammar checker :)
+[language-server.ltex-ls-plus]
+command = "ltex-ls-plus"
+
+[language-server.ltex-ls-plus.config.ltex]
+enabled = true
+language = "en-US"
+
+[language-server.ltex-ls-plus.config.ltex.disabledRules]
+"en-US" = ["MORFOLOGIK_RULE_EN_US"]
+"en-GB" = ["MORFOLOGIK_RULE_EN_GB"]
+
+# https://github.com/mattn/efm-langserver
+# General purpose Language Server
+# Used for cSpell, textlint
+[language-server.efm]
+command = "efm-langserver"
+
+# https://github.com/t3tra-dev/MoZuku
+# LSP Server for Japanese
+[language-server.mozuku]
+command = "mozuku-lsp"
+
+# vale-ls
+
 # ---
+# Python
 
 [language-server.basedpyright.config.basedpyright.analysis.diagnosticSeverityOverrides]
 reportUnknownVariableType = "none"
@@ -20,7 +63,7 @@ command = "ruff"
 args = ["server", "--preview"]
 
 [language-server.ruff.config.settings]
-args = ["--ignore", "E501"]
+args = ["--ignore", "E501", "F403", "F405", "E722"]
 
 [language-server.ty]
 command = "ty"
@@ -33,38 +76,45 @@ experimental.autoImport = true
 
 [[language]]
 name = "python"
-language-servers = ["basedpyright", "ruff"]
+language-servers = ["basedpyright", "ruff", "ltex-ls-plus", "efm"]
 auto-format = true
 
 # ---
+# JavaScript/TypeScript
 
+# Timed out Issue?
 # [language-server.oxlint]
 # command = "oxc_language_server"
 
-[language-server]
-biome = { command = "biome", args = ["lsp-proxy"] }
+[language-server.biome]
+command = "biome"
+args = ["lsp-proxy"]
 
 [[language]]
 name = "javascript"
+auto-format = true
 language-servers = [
     { name = "typescript-language-server", except-features = [
         "format",
     ] },
     "biome",
-    "typos",
+    "ltex-ls-plus",
+    "efm",
 ]
-auto-format = true
+
 
 [[language]]
 name = "typescript"
+
 language-servers = [
     { name = "typescript-language-server", except-features = [
         "format",
     ] },
     "biome",
-    "typos",
+    "ltex-ls-plus",
+    "efm",
 ]
-auto-format = true
+
 
 [[language]]
 name = "tsx"
@@ -74,7 +124,8 @@ language-servers = [
         "format",
     ] },
     "biome",
-    "typos",
+    "ltex-ls-plus",
+    "efm",
 ]
 
 [[language]]
@@ -85,7 +136,8 @@ language-servers = [
         "format",
     ] },
     "biome",
-    "typos",
+    "ltex-ls-plus",
+    "efm",
 ]
 
 [[language]]
@@ -95,53 +147,64 @@ language-servers = [
         "format",
     ] },
     "biome",
-    "typos",
+    "ltex-ls-plus",
+    "efm",
 ]
 
 # ---
+# HTML/CSS
 
 [[language]]
 name = "html"
-formatter = { command = "prettier", args = ["--parser", "html"] }
 auto-format = true
+formatter = { command = "prettier", args = ["--parser", "html"] }
+
 
 [[language]]
 name = "css"
-formatter = { command = "prettier", args = ["--parser", "css"] }
 auto-format = true
+formatter = { command = "prettier", args = ["--parser", "css"] }
 
 # ---
+# C/C++
 
 [[language]]
 name = "c"
-formatter = { command = "clang-format" }
 auto-format = true
+formatter = { command = "clang-format" }
+
 
 [[language]]
 name = "cpp"
-language-servers = ["clangd"]
-formatter = { command = "clang-format" }
 auto-format = true
+formatter = { command = "clang-format" }
+
 
 # ---
+# LaTeX
 
 [[language]]
 name = "latex"
-formatter = { command = "latexindent" }
 auto-format = true
+formatter = { command = "latexindent" }
+
 
 # ---
+# Markdown
 
-[language-server.ltex-ls-plus]
-command = "ltex-ls-plus"
-
+# TODO: disable ltex spellcheck
 [[language]]
 name = "markdown"
-language-servers = ["markdown-oxide", "ltex-ls-plus"]
+language-servers = ["markdown-oxide", "ltex-ls-plus", "efm", "mozuku"]
 formatter = { command = "prettier", args = ["--parser", "markdown"] }
 
+
 # ---
+# Rust
 
 [[language]]
 name = "rust"
 auto-format = true
+
+
+# ---

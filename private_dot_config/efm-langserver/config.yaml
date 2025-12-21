@@ -1,0 +1,32 @@
+version: 2
+# log-file: /tmp/efm.log
+# log-level: 1
+
+# Thanks: https://ryota2357.com/blog/2023/textlint-with-efm-nvimlsp/
+# But if this used, Node spawns crazy and my computer got cooked. How can I fix?
+tools:
+  textlint: &textlint
+    lint-command: 'textlint -f json --stdin --stdin-filename ${INPUT} --config $XDG_CONFIG_HOME/.textlintrc.json | jq -r ''.[] | .filePath as $filePath | .messages[] | "1;\($filePath):\(.line):\(.column):\n2;\(.message | split("\n")[0])\n3;[\(.ruleId)]"'''
+    lint-ignore-exit-code: true
+    lint-stdin: true
+    # lint-debounce: 200ms
+    lint-formats:
+      - '%E1;%E%f:%l:%c:'
+      - '%C2;%m'
+      - '%C3;%m%Z'
+    
+  cspell: &cspell
+    lint-command: "cspell lint stdin://${INPUT} --no-progress --no-summary --config $XDG_CONFIG_HOME/cspell.json"
+    lint-stdin: true
+    lint-formats: ["%f:%l:%c - %m"]
+
+languages:
+  markdown:
+  #  - <<: *textlint
+    - <<: *cspell
+  python:
+    - <<: *cspell
+  javascript:
+    - <<: *cspell
+  typescript:
+    - <<: *cspell

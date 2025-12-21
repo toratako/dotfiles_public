@@ -10,6 +10,7 @@ path=(
     "$HOME/.nimble/bin"
     "$HOME/perl5/bin"
     "$CARGO_HOME/bin"
+    "$GOPATH/bin"
     $path
 )
 export PATH

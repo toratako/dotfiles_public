@@ -21,6 +21,10 @@
       "version": "0.34.5",
       "overridden": false
     },
+    "cspell": {
+      "version": "9.4.0",
+      "overridden": false
+    },
     "npm": {
       "version": "11.7.0",
       "overridden": false

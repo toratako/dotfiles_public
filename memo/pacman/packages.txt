@@ -27,6 +27,7 @@ fastfetch
 fastjar
 fd
 ffmpeg
+harper
 fzf
 ghq
 git

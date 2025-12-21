@@ -60,6 +60,7 @@ uv tool install angr-management
 uv tool install ty@latest
 
 nimble install nimlangserver
+go install github.com/mattn/efm-langserver@latest
 ```
 
 ## Links
