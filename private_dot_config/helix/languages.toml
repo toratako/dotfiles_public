@@ -1,8 +1,6 @@
 # Language configuration for Helix
 
-# ---
 # for all languages
-
 # Minimal false positive spell checker
 # Alternative: efm + cSpell (Better)
 [language-server.typos]
@@ -45,9 +43,8 @@ command = "mozuku-lsp"
 
 # vale-ls
 
-# ---
-# Python
 
+# Python
 [language-server.basedpyright.config.basedpyright.analysis.diagnosticSeverityOverrides]
 reportUnknownVariableType = "none"
 reportUnknownArgumentType = "none"
@@ -63,7 +60,7 @@ command = "ruff"
 args = ["server", "--preview"]
 
 [language-server.ruff.config.settings]
-args = ["--ignore", "E501", "F403", "F405", "E722"]
+lint.ignore = ["E501", "F403", "F405", "E722"]
 
 [language-server.ty]
 command = "ty"
@@ -79,7 +76,7 @@ name = "python"
 language-servers = ["basedpyright", "ruff", "ltex-ls-plus", "efm"]
 auto-format = true
 
-# ---
+
 # JavaScript/TypeScript
 
 # Timed out Issue?
@@ -102,7 +99,6 @@ language-servers = [
     "efm",
 ]
 
-
 [[language]]
 name = "typescript"
 
@@ -114,7 +110,6 @@ language-servers = [
     "ltex-ls-plus",
     "efm",
 ]
-
 
 [[language]]
 name = "tsx"
@@ -151,28 +146,24 @@ language-servers = [
     "efm",
 ]
 
-# ---
-# HTML/CSS
 
+# HTML/CSS
 [[language]]
 name = "html"
 auto-format = true
 formatter = { command = "prettier", args = ["--parser", "html"] }
-
 
 [[language]]
 name = "css"
 auto-format = true
 formatter = { command = "prettier", args = ["--parser", "css"] }
 
-# ---
-# C/C++
 
+# C/C++
 [[language]]
 name = "c"
 auto-format = true
 formatter = { command = "clang-format" }
-
 
 [[language]]
 name = "cpp"
@@ -180,31 +171,21 @@ auto-format = true
 formatter = { command = "clang-format" }
 
 
-# ---
 # LaTeX
-
 [[language]]
 name = "latex"
 auto-format = true
 formatter = { command = "latexindent" }
 
 
-# ---
 # Markdown
-
-# TODO: disable ltex spellcheck
 [[language]]
 name = "markdown"
 language-servers = ["markdown-oxide", "ltex-ls-plus", "efm", "mozuku"]
 formatter = { command = "prettier", args = ["--parser", "markdown"] }
 
 
-# ---
 # Rust
-
 [[language]]
 name = "rust"
 auto-format = true
-
-
-# ---

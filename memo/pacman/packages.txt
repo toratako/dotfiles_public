@@ -27,7 +27,6 @@ fastfetch
 fastjar
 fd
 ffmpeg
-harper
 fzf
 ghq
 git
@@ -43,12 +42,14 @@ go
 gopls
 gperf
 grc
+harper
 hblock
 helix
 hexedit
 hexyl
 hugo
 imagemagick
+inetutils
 inxi
 jq
 lazydocker
