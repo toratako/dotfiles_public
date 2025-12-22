@@ -20,6 +20,8 @@
     swc = switch -c
 
     b = branch
+    cp = cherry-pick
+    sm = submodule
 
     d = diff
     ds = diff --staged
@@ -38,7 +40,7 @@
     wtl = worktree list
 
     s = status -sb
-    unstage = reset HEAD --
+    unstage = restore --staged
     uncommit = reset --soft HEAD~1
     last = log -1 HEAD
     root = rev-parse --show-toplevel

@@ -75,6 +75,7 @@ cursor-line = "warning"
 
 [keys.normal.space]
 q = ":buffer-close"
+"\\" = ["select_all", "select_regex"]
 
 [keys.insert]
 j = { j = "normal_mode" }
