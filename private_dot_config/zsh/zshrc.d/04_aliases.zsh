@@ -56,9 +56,12 @@ alias yz="yazi"
 
 ## Custom aliases
 alias beep="notify-send \"Finished\""
+alias chezmoi-cd="cd $(chezmoi source-path)"
+alias chezmoicd="cd $(chezmoi source-path)"
 alias ghq-cd="cd \$(ghq root)/\$(ghq list | fzf)"
+alias ghqcd="cd \$(ghq root)/\$(ghq list | fzf)"
 alias gip="curl ifconfig.me"
-alias groot="cd $(git rev-parse --show-toplevel)"
+alias groot='cd "$(git rev-parse --show-toplevel 2>/dev/null)"'
 alias gtree="git log --graph --oneline --all --decorate"
 alias langc="export LANG='C'"
 alias n="notify-send \"Finished\""

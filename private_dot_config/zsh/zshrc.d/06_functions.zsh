@@ -22,10 +22,6 @@ zz() {
     fi
 }
 
-chezmoi-cd() {
-    cd $(chezmoi source-path)
-}
-
 # Thanks: https://yazi-rs.github.io/docs/quick-start
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -33,4 +29,14 @@ function y() {
 	IFS= read -r -d '' cwd < "$tmp"
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
+}
+
+gg() {
+    local url=$1
+    if [[ -z "$url" ]]; then
+        echo "Usage: gg <github-url>"
+        return 1
+    fi
+    local repo_url=$(echo "$url" | sed -E 's|(https://github\.com/[^/]+/[^/]+).*|\1|')
+    ghq get "$repo_url"
 }
