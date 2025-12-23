@@ -22,9 +22,11 @@
     b = branch
     cp = cherry-pick
     sm = submodule
+    co = checkout
 
     d = diff
     ds = diff --staged
+    dw = diff --word-diff
 
     lo = log --oneline --graph --decorate
     la = log --oneline --graph --decorate --all
