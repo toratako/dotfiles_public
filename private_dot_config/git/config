@@ -1,9 +1,7 @@
 [include]
-    # !!warn!! place this file correctly
     path = ~/.config/git/config.local
 
 # Thanks: https://www.reddit.com/r/commandline/comments/wf7oju/post_your_favorite_git_aliases/, https://gist.github.com/mwhite/6887990
-# !!DON'T USE/CREATE DANGEROUS ABBREVIATIONS!!
 [alias]
     a = add .
     aa = add -A

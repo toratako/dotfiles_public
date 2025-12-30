@@ -101,6 +101,7 @@ tldr
 tmux
 tokei
 traceroute
+trash-cli
 tree
 typos
 typos-lsp

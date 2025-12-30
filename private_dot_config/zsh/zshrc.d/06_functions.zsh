@@ -1,6 +1,6 @@
 # Custom Functions
 
-# fzfing directory stack
+# fzf directory stack
 zz() {
     local dir_entry
     local dir_path

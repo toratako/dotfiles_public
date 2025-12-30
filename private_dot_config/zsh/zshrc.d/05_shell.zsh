@@ -13,22 +13,22 @@ export SAVEHIST=50000
 # export HISTTIMEFORMAT=""
 # unset HISTTIMEFORMAT
 # setopt extended_history
-setopt inc_append_history
-setopt share_history
-setopt hist_ignore_dups
-setopt hist_ignore_all_dups
 setopt hist_find_no_dups
-setopt hist_save_no_dups
-setopt hist_reduce_blanks
+setopt hist_ignore_all_dups
+setopt hist_ignore_dups
 setopt hist_ignore_space
 setopt hist_no_store
+setopt hist_reduce_blanks
+setopt hist_save_no_dups
+setopt inc_append_history
+setopt share_history
 
 setopt auto_pushd
-setopt pushd_silent
 setopt pushd_ignore_dups
+setopt pushd_silent
 
-setopt no_case_glob
 setopt extended_glob
+setopt no_case_glob
 setopt nonomatch
 
 # I'd like check candidates first
@@ -40,7 +40,7 @@ setopt nonomatch
 setopt list_packed
 setopt list_rows_first
 
-unsetopt case_glob
+# setopt glob_dots
 setopt complete_in_word
 setopt magic_equal_subst
-# setopt glob_dots
+unsetopt case_glob

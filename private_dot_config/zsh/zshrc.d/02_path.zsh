@@ -15,6 +15,9 @@ path=(
 )
 export PATH
 
+# for SageMath
+export PYTHONPATH=~/python_sage:$PYTHONPATH
+
 # Perl
 export PERL5LIB=$PERL5LIB:$HOME/perl5/lib/perl5
 export PERL_LOCAL_LIB_ROOT=$PERL_LOCAL_LIB_ROOT:$HOME/perl5

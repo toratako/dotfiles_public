@@ -1,6 +1,6 @@
 # Minimal ~/.bashrc
 
-# If not running interactively, don't do anything
+# Interactive shell only
 [[ $- != *i* ]] && return
 
 # Path
@@ -16,11 +16,7 @@ done
 export PATH
 
 # Aliases
-alias ll="ls -alF --color=auto"
-alias la="ls -A --color=auto"
-alias l="ls -CF --color=auto"
-
-alias ls="ls --color=auto"
+alias ls="command ls --color=auto"
 alias grep="grep --color=auto"
 alias diff="diff --color=auto"
 alias ip="ip -color=auto"
@@ -30,9 +26,13 @@ alias egrep="egrep --color=auto"
 alias df="df -h"
 alias du="du -h"
 
-alias vi="vim"
-alias g="git"
-alias d="docker"
+alias cp="cp -i"
+alias mv="mv -i"
+alias rm="rm -i"
+
+alias ll="command ls -alF --color=auto"
+alias la="command ls -A --color=auto"
+alias l="command ls -CF --color=auto"
 
 alias "..."="cd ./../../"
 alias "...."="cd ./../../../"
