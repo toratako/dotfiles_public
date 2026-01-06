@@ -437,6 +437,7 @@
         "E722"
     ],
     "git.enableCommitSigning": true,
+    "editor.accessibilitySupport": "off",
     // uninstalled
     // "rest-client.enableTelemetry": false,
     // "code-runner.enableAppInsights": false,

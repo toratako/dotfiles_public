@@ -63,12 +63,17 @@ cursor-line = "warning"
 # Yazi integration
 # Thanks: https://github.com/sxyazi/yazi/pull/2461
 "C-y" = [
-    ':sh rm -f /tmp/unique-file',
-    ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
-    ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
-    ':open %sh{cat /tmp/unique-file}',
-    ':redraw',
+    ":sh rm -f /tmp/helix-yazi-file",
+    ":insert-output %sh{ tmux popup -w 90%% -h 80%% -d \"$PWD\" -E \"tmux new-session yazi --chooser-file=/tmp/helix-yazi-file \\; set status off \\; set pane-border-status off\" }",
+    ":sh printf \"\\x1b[?1049h\\x1b[?2004h\" > /dev/tty",
+    ":open %sh{ cat /tmp/helix-yazi-file }",
+    ":redraw"
 ]
+
+"C-right" = ["move_next_word_start", "collapse_selection"]
+"C-left" = ["move_prev_word_start", "collapse_selection"]
+"C-up" = ["goto_prev_paragraph", "collapse_selection"]
+"C-down" = ["goto_next_paragraph", "collapse_selection"]
 
 # lazygit integration (for Tmux)
 "C-g" = [":sh tmux popup -w 90%% -h 80%% -d \"$(pwd)\" -E lazygit", ":redraw"]
@@ -79,3 +84,7 @@ q = ":buffer-close"
 
 [keys.insert]
 j = { j = "normal_mode" }
+"C-right" = ["move_next_word_start", "collapse_selection"]
+"C-left" = ["move_prev_word_start", "collapse_selection"]
+"C-up" = ["goto_prev_paragraph", "collapse_selection"]
+"C-down" = ["goto_next_paragraph", "collapse_selection"]

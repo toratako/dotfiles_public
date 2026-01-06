@@ -112,6 +112,7 @@ uv
 v4l2loopback-utils
 vbindiff
 vim
+vivid
 whois
 xmlto
 yazi
