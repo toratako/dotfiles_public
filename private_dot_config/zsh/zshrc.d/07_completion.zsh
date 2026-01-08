@@ -24,4 +24,10 @@ zstyle ':fzf-tab:*' accept-line enter
 # zstyle ':fzf-tab:complete:(cd|ls|z):*' fzf-preview 'eza --group-directories-first -1 -l -F -a -b --icons=always --color=always $realpath'
 
 autoload -Uz compinit
-compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
+local dump_file="$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
+
+if [[ -n "$dump_file"(#qN.m-1) ]]; then
+  compinit -C -d "$dump_file"
+else
+  compinit -d "$dump_file"
+fi

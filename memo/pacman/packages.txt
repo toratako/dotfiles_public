@@ -6,6 +6,7 @@ bat
 bind
 bingrep
 biome
+bpf
 bridge-utils
 btop
 ccache
@@ -16,6 +17,7 @@ cmake
 ctop
 curlie
 cyme
+cython
 direnv
 dnsmasq
 docker
@@ -52,6 +54,7 @@ imagemagick
 inetutils
 inxi
 jq
+kcpuid
 lazydocker
 lazygit
 lesspipe
@@ -77,6 +80,7 @@ openbsd-netcat
 pacman-contrib
 pandoc-cli
 pdftk
+perf
 podman
 pwgen
 qemu-full
@@ -94,7 +98,6 @@ systemctl-tui
 tailscale
 taplo-cli
 texlab
-thefuck
 tig
 tinymist
 tldr

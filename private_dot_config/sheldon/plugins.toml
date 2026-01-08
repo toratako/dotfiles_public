@@ -1,16 +1,22 @@
 shell = "zsh"
 
+# Thanks: https://github.com/rossmacarthur/sheldon/blob/0.7.4/docs/src/Examples.md#deferred-loading-of-plugins-in-zsh
+[templates]
+defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
+
 [plugins]
 
-# [plugins.LS_COLORS]
-# github = "trapd00r/LS_COLORS"
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
 
 # fzf-tab needs initialize before wrap widgets
 [plugins.fzf-tab]
 github = "Aloxaf/fzf-tab"
+apply = ["defer"]
 
 [plugins.fzf-tab-source]
 github = "Freed-Wu/fzf-tab-source"
+apply = ["defer"]
 
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
@@ -20,9 +26,11 @@ github = "zsh-users/zsh-syntax-highlighting"
 
 [plugins.zsh-history-substring-search]
 github = "zsh-users/zsh-history-substring-search"
+apply = ["defer"]
 
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
+apply = ["defer"]
 
 [plugins.ni]
 github = "azu/ni.zsh"

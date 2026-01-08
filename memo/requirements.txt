@@ -5,6 +5,7 @@ bitarray
 capstone
 colorama
 cypari2
+Cython
 ecdsa
 fastecdsa
 fpylll
@@ -43,7 +44,6 @@ scapy
 scipy
 setuptools
 shapely
-sortedcontainers
 sympy
 unicorn
 volatility3
