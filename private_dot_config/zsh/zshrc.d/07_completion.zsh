@@ -1,4 +1,4 @@
-# Complement
+# Completion
 
 # Thanks: https://thevaluable.dev/zsh-completion-guide-examples/
 zstyle ':completion:*' completer _extensions _complete _approximate

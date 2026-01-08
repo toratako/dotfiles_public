@@ -3,7 +3,7 @@
 
 # Thanks: https://www.reddit.com/r/commandline/comments/wf7oju/post_your_favorite_git_aliases/, https://gist.github.com/mwhite/6887990
 [alias]
-    a = add .
+    a = add
     aa = add -A
     ap = add -p
 
@@ -60,6 +60,9 @@
 
 [ghq]
     root = ~/repos/
+
+[advice]
+    addEmptyPathspec = false
 
 # Thanks: https://github.com/dandavison/delta
 [core]

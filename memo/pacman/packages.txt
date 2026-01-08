@@ -39,6 +39,7 @@ git-delta
 git-filter-repo
 git-lfs
 github-cli
+gitleaks
 glow
 go
 gopls
@@ -82,6 +83,7 @@ pandoc-cli
 pdftk
 perf
 podman
+pre-commit
 pwgen
 qemu-full
 reflector

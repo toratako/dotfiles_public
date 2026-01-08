@@ -1,12 +1,10 @@
 # PATH Settings
 
-# !!warn!! needs periodic updates (mise)
 typeset -U PATH path
 path=(
     "$HOME/.cargo/bin"
     "$HOME/.dotnet/tools"
     "$HOME/.local/bin"
-    "$HOME/.local/share/gem/ruby/3.4.0/bin"
     "$HOME/.nimble/bin"
     "$HOME/perl5/bin"
     "$CARGO_HOME/bin"

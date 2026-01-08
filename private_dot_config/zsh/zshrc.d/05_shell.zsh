@@ -10,9 +10,6 @@ setopt rm_star_silent
 export HISTFILE="$XDG_STATE_HOME"/zsh/history
 export HISTSIZE=50000
 export SAVEHIST=50000
-# export HISTTIMEFORMAT=""
-# unset HISTTIMEFORMAT
-# setopt extended_history
 setopt hist_find_no_dups
 setopt hist_ignore_all_dups
 setopt hist_ignore_dups
