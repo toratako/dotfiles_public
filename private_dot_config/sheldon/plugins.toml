@@ -9,6 +9,12 @@ defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file 
 [plugins.zsh-defer]
 github = "romkatv/zsh-defer"
 
+# ---
+
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+apply = ["defer"]
+
 # fzf-tab needs initialize before wrap widgets
 [plugins.fzf-tab]
 github = "Aloxaf/fzf-tab"
@@ -18,19 +24,18 @@ apply = ["defer"]
 github = "Freed-Wu/fzf-tab-source"
 apply = ["defer"]
 
+# ---
+
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 
-[plugins.zsh-syntax-highlighting]
-github = "zsh-users/zsh-syntax-highlighting"
-
 [plugins.zsh-history-substring-search]
 github = "zsh-users/zsh-history-substring-search"
-apply = ["defer"]
-
-[plugins.zsh-completions]
-github = "zsh-users/zsh-completions"
-apply = ["defer"]
 
 [plugins.ni]
 github = "azu/ni.zsh"
+
+# ---
+
+[plugins.fast-syntax-highlighting]
+github = "zdharma-continuum/fast-syntax-highlighting"

@@ -41,6 +41,7 @@ git-lfs
 github-cli
 gitleaks
 glow
+gnuplot
 go
 gopls
 gperf
@@ -68,6 +69,7 @@ lynis
 man-db
 man-pages
 markdown-oxide
+meson
 mise
 mkcert
 mpc
@@ -75,6 +77,7 @@ msolve
 mtr
 navi
 nim
+ninja
 nmap
 nvme-cli
 openbsd-netcat

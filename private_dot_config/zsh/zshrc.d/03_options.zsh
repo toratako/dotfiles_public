@@ -29,6 +29,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS="--walker-skip .git,node_modules,target --preview 'bat -n --color=always {}' --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 
 export LS_COLORS="$(vivid generate snazzy)"
+export WORDCHARS="*?_-.[]~=&;!#$%^(){}<>"
 
 # Thanks: https://dev.classmethod.jp/articles/zsh-time-command-formatting-like-bash/
 export TIMEFMT=$'\n\n========================\nProgram : %J\nCPU     : %P\nuser    : %*Us\nsystem  : %*Ss\ntotal   : %*Es\n========================\n'

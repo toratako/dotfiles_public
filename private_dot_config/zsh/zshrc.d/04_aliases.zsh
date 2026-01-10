@@ -15,6 +15,7 @@ alias curl="curlie"
 alias df="df -h"
 alias du="du -h"
 alias emacs="emacs --no-window-system"
+alias free="free -h"
 alias gdb="gdb -q -ex init-pwndbg $@"
 alias hexdump="hexyl --border=ascii -v"
 alias ls="eza --group-directories-first -1 -l -F -a -b --icons=always"
@@ -22,6 +23,7 @@ alias mv="mv -i"
 alias ps="ps auxf"
 alias rm="trash-put"
 alias tree="tree --dirsfirst -C -a -I '.git|node_modules|.cache'"
+alias type="type -a"
 
 ## With color
 # alias find="fd --color=always --hidden --follow $FD_EXCLUDE"
@@ -30,6 +32,9 @@ alias diff="diff --color=always"
 alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias ip="ip -color=always"
+alias zegrep="zegrep --color=auto"
+alias zfgrep="zfgrep --color=auto"
+alias zgrep="zgrep --color=auto"
 
 ## Abbreviations
 alias d="docker"
@@ -61,7 +66,7 @@ alias groot='cd "$(git rev-parse --show-toplevel 2>/dev/null)"'
 alias langc="export LANG='C'"
 alias n="notify-send \"Finished\""
 alias tailreboot="sudo tailscale down && sudo tailscale up"
-alias venv="source venv/bin/activate"
+alias venv="source .venv/bin/activate"
 
 ## tar
 alias targz="tar -cvzf"

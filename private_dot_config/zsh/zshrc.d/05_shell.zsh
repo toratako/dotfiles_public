@@ -5,6 +5,9 @@ setopt auto_cd
 setopt no_beep
 setopt no_list_beep
 setopt rm_star_silent
+setopt notify
+setopt long_list_jobs
+setopt check_jobs
 
 ## History
 export HISTFILE="$XDG_STATE_HOME"/zsh/history
