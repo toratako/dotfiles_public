@@ -428,8 +428,7 @@
     // ~/.config/environment.d/*.conf for this purpose.
     "rust-analyzer.server.extraEnv": {
         "RUSTUP_HOME": "/home/user/.local/share/rustup",
-        "CARGO_HOME": "/home/user/.cargo",
-        "PATH": "/home/user/.cargo/bin:/usr/local/bin:/usr/bin"
+        "CARGO_HOME": "/home/user/.local/share/cargo"
     },
     "ruff.lint.ignore": [
         "F403",

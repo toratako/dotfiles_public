@@ -1,5 +1,6 @@
 # This file does not mean, I hate/dislike or want to block these sites/apps/services. 
 # I just want to block them on my devices for productivity, privacy, security, or other personal reasons.
+# LICENSE: CC0 1.0
 
 # Browser Shootings
 0.0.0.0 1v1.lol
@@ -174,5 +175,3 @@
 
 # SNS
 0.0.0.0 tiktok.com www.tiktok.com m.tiktok.com
-0.0.0.0 video.twimg.com pbs.twimg.com
-0.0.0.0 giphy.com tenor.com imgur.com www.tumblr.com tumblr.com

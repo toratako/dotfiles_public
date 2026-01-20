@@ -13,4 +13,5 @@ ollama-rocm
 texlive
 texlive-langcjk
 texlive-langjapanese
+yubikey-manager
 zint-qt
