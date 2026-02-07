@@ -34,6 +34,9 @@ Colors & Themes:
     Plasma Style: Breeze Dark
     System Sounds: Ocean
     Splash Screen: None
+  
+  Login Screen (SDDM):
+    Theme: Breeze Dark
 
 Text & Fonts:
   Fonts:
@@ -65,11 +68,22 @@ Search:
     Locations
     Unit Converter
 
+Screen Locking:
+  Change Appearance (on top-right corner)
+
 Recent Files:
   Remember opened documents: Do not Remember
 
 User Feedback: Disabled
 
+Language & Time:
+  Input Method:
+    Input Method Off: Keyboard - Japanese
+    Input Method On: Mozc
+    Configure addons > Classic User Interface > Theme
+    Configure addons > Wayland > [Disable] Allow overriding...
+    X Input Method Frontend > [Enable] Use on the...
+    
 Power Management:
   Suspend Session:
     When inactive: Do nothing (for SSH)

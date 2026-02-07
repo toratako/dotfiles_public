@@ -10,6 +10,7 @@ ghidra
 hashcat
 iaito
 jadx
+libfaketime
 mitmproxy
 nasm
 one_gadget
@@ -32,6 +33,7 @@ python-sympy
 python-z3-solver
 r2ghidra
 radare2
+rizin
 ropgadget
 ropper
 rz-cutter
@@ -41,6 +43,7 @@ strace
 tracexec
 upx
 valgrind
+vbindiff
 wabt
 wireshark-qt
 zydis

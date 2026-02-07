@@ -1,6 +1,7 @@
 adobe-source-han-sans-jp-fonts
 alacritty
 bleachbit
+cameractrls
 chromium
 converseen
 cpu-x
@@ -11,9 +12,11 @@ fcitx5-mozc
 filelight
 ghostty
 gimp
+gnuplot
 gwenview
 handbrake
 haruna
+helvum
 keepassxc
 kompare
 lact

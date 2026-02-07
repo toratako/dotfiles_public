@@ -157,7 +157,7 @@
     "basedpyright.analysis.extraPaths": [
         // load from project root venv
         // !!warn needs periodic updates!!
-        "${workspaceFolder}/venv/lib/python3.14/site-packages",
+        "${workspaceFolder}/.venv/lib/python3.14/site-packages",
         "~/.local/share/mise/installs/python/3.14.0/lib/python3.14/site-packages"
     ],
     // llvm-vs-code-extensions.vscode-clangd
@@ -267,7 +267,7 @@
     // charliermarsh.ruff
     "ruff.lineLength": 80,
     // github.copilot
-    "github.copilot.chat.localeOverride": "ja",
+    "github.copilot.chat.localeOverride": "en",
     // esbenp.prettier-vscode
     "prettier.tabWidth": 4,
     // redhat.vscode-yaml
@@ -437,6 +437,8 @@
     ],
     "git.enableCommitSigning": true,
     "editor.accessibilitySupport": "off",
+    "chat.disableAIFeatures": false,
+    "github.copilot.nextEditSuggestions.enabled": true,
     // uninstalled
     // "rest-client.enableTelemetry": false,
     // "code-runner.enableAppInsights": false,

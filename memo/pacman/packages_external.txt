@@ -7,4 +7,5 @@ ltex-ls-plus-bin
 readpe
 tex-fmt-bin
 uftrace-git
+video2x-qt6
 vscodium-bin
