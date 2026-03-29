@@ -64,6 +64,8 @@ navi
 ninja
 nmap
 openbsd-netcat
+opencode
+ouch
 pacman-contrib
 pandoc-cli
 pdftk
@@ -91,6 +93,7 @@ usbutils
 uv
 vim
 vivid
+vulkan-headers
 whois
 xmlto
 yazi

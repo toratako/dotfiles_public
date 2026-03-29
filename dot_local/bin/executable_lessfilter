@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 exists() {
 	for c in "$@"; do
 		if command -v "$c" >/dev/null; then

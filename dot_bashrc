@@ -1,5 +1,3 @@
-# Minimal ~/.bashrc
-
 # Interactive shell only
 [[ $- != *i* ]] && return
 

@@ -5,6 +5,7 @@ markdown-oxide
 ruff
 taplo-cli
 tinymist
+ty
 typos
 typos-lsp
 xmlto

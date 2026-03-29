@@ -3,6 +3,11 @@
 KDROIDWIN_UBLACKLIST_FILTER_URL = "https://raw.githubusercontent.com/Kdroidwin/uBlacklist-filter-by-kdroidwin/refs/heads/main/uBlacklist.txt"
 
 
+DOMAIN_ALLOWLIST = [
+    "hub.docker.com",
+]
+
+
 def download_kdroidwin_filter():
     import urllib.request
 
@@ -30,6 +35,8 @@ def create_krdoidwin_filter():
         if any(char in pattern for char in ignores):
             continue
         domain = pattern.split("/")[0]
+        if domain in DOMAIN_ALLOWLIST:
+            continue
         new_filter.append(f"0.0.0.0 {domain}")
 
     # remove dupes

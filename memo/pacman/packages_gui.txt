@@ -16,7 +16,6 @@ gnuplot
 gwenview
 handbrake
 haruna
-helvum
 keepassxc
 kompare
 lact
