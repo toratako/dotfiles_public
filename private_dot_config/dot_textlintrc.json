@@ -1,7 +1,4 @@
 {
-  "plugins": {
-    "latex2e": false
-  },
   "filters": {},
   "rules": {
     "terminology": true,
@@ -10,7 +7,6 @@
         "max": 3000
       }
     },
-    "preset-ja-spacing": false,
     "ja-hiraku": {
       "daimeishi": true,
       "fukujoshi": true,
